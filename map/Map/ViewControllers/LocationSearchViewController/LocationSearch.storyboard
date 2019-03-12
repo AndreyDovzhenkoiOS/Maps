@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location Search View Controller-->
+        <scene sceneID="hOy-47-zBb">
+            <objects>
+                <viewController storyboardIdentifier="LocationSearchViewController" id="BSP-OC-pvR" customClass="LocationSearchViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdD-ad-wQj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HcB-BF-3AM">
+                                <rect key="frame" x="9.5" y="10" width="356.5" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BSP-OC-pvR" id="yTf-31-8VR"/>
+                                    <outlet property="delegate" destination="BSP-OC-pvR" id="BWG-nH-aZj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="HcB-BF-3AM" firstAttribute="height" secondItem="vdD-ad-wQj" secondAttribute="height" id="5sy-Ib-qaV"/>
+                            <constraint firstItem="HcB-BF-3AM" firstAttribute="centerX" secondItem="GH3-Bz-NWY" secondAttribute="centerX" id="91F-Lj-VUN"/>
+                            <constraint firstItem="HcB-BF-3AM" firstAttribute="width" secondItem="vdD-ad-wQj" secondAttribute="width" multiplier="0.95" id="JPp-92-Yg2"/>
+                            <constraint firstItem="HcB-BF-3AM" firstAttribute="centerY" secondItem="GH3-Bz-NWY" secondAttribute="centerY" id="ZiA-w9-AXB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GH3-Bz-NWY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="HcB-BF-3AM" id="OpS-ao-J7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="052-AF-Ifq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="72.413793103448285"/>
+        </scene>
+    </scenes>
+</document>
